@@ -1,0 +1,58 @@
+#+TITLE:	README for test_listview on Flutter
+#+AUTHOR:	hanuomk2(odaba)
+#+DATE:		2022-10-01
+
+* test_listview on Flutter
+
+フォトギャラリーの画像ファイルをリスト表示し、
+リストから選択した画像を拡大表示するよくあるビューアを
+Flutterで作りました。
+
+Androidエミュレータでしか動作確認していません。
+画像ファイルをリスト表示するサンプルはよく見るのですが、
+フォトギャラリーを読み込むのはあんまり見ないので公開します。
+フォトギャラリーの読み込みには[[https://pub.dev/packages/photo_gallery][photo_gallery]]パッケージを使用してます。
+基本的には上記[[https://pub.dev/packages/photo_gallery][photo_gallery]]パッケージの説明に従っていますが、
+開発環境が古いので、それに合わせてパッケージ等のバージョンを変更してます。
+
+** 謝辞
+
+[[https://kabochapo.hateblo.jp/entry/2021/05/10/190621][Flutter で画像を一覧表示するときに注意すること]]
+FlutterでのListViewの使い方はこのWebpageで勉強しました。
+
+** 開発環境
+
+ - MacBook Pro(13-inch, Mid2022) MD101J/A
+ - MacOS Catalina 10.15.7
+ - Flutter 2.5.3
+ - dart 2.17.3
+ - Android SDK 32
+
+** ライセンス
+
+ Apache License 2.0
+
+** その他
+
+ Flutterはまだ使い始めなので、null safetyとかWidgetとか慣れないです。
+ また昔の人なので、Webpageを検索して情報収集とか、英語文献で
+ チンプンカンチンです。
+
+ 画面構成は以下の形で、Columnで垂直にWidgetを配置しています。
+ |------------------------|
+ | AppBar                 |
+ |------------------------|
+ | DropDownButton         |
+ |------------------------|
+ | ListView               |
+ |------------------------|
+ | ImageView(FadeInImage) |
+ |------------------------|
+
+[[https://pub.dev/packages/photo_gallery][photo_gallery]]パッケージの説明だと、ViewProviderで
+動画再生も出来そうでしたが、やりかたがよく分かりませんでした
+(ソースコメントに試行錯誤の痕が…)。
+
+** 画面
+
+ [[file:Android.png]]
